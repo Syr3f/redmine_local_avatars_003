@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
     file_field = params[:avatar] rescue nil
 		@user.attachments.clear
-		attachments = attach_files(@user, {'first' => {'file' => file_field, 'description' => 'avatar'}}) 
+		attachments = Attachment.attach_files(@user, {'first' => {'file' => file_field, 'description' => 'avatar'}}) 
 		flash[:notice] = l :message_avatar_uploaded
 		@user.save
 		redirect_to :action => 'edit', :id => @user
