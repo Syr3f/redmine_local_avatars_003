@@ -1,3 +1,13 @@
-= local_avatars
+= Redmine Local Avatars
 
-Description goes here
+The plugin gives a Redmine user the power to switch his avatar by uploading a new image.
+
+= Installation
+
+cd <redmine_folder>
+cd vendor/plugins
+git clone git://github.com/Serafim-III/redmine_local_avatars.git
+
+Restart Redmine.
+
+Voilà!
